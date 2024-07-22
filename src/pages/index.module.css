@@ -6,6 +6,20 @@
   height: 100vh;
   min-height: 100vh;
   padding: 0 0.5rem;
+  transition: 1s all;
+  animation: gradation infinite;
+}
+
+@keyframes gradation {
+  0% {
+    background: linear-gradient(#e66465, #9198e5);
+  }
+
+  100% {
+    background: linear-gradient(217deg, rgb(255 0 0 / 80%), rgb(255 0 0 / 0%) 70.71%),
+      linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
+      linear-gradient(336deg, rgb(0 0 255 / 80%), rgb(0 0 255 / 0%) 70.71%);
+  }
 }
 
 .board {
@@ -21,4 +35,11 @@
   font-size: 150px;
   text-align: center;
   border: 1px black solid;
+}
+
+.comment {
+  position: absolute;
+  font-size: 100px;
+  font-weight: bold;
+  background: linear-gradient(45deg, blue, red);
 }
